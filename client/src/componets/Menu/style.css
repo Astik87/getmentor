@@ -1,0 +1,30 @@
+.menu {
+	display: flex;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	margin-left: 60px;
+	cursor: pointer;
+}
+
+.profile .profileIcon {
+	width: 20px;
+	height: 20px;
+	fill: #9D7C7C;
+}
+
+.profile .vector {
+	width: 20px;
+	height: 5px;
+	fill: #9D7C7C;
+}
+
+.profile:hover svg {
+	transition: .3s all;
+}
+
+.profile:hover svg {
+	fill: #5FA1FC;
+}

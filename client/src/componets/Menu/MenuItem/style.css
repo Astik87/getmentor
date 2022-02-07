@@ -1,0 +1,11 @@
+.menu-item a {
+	font-size: 12px;
+	color: #9d7c7c;
+	text-decoration: none;
+	margin: 0 6px;
+	transition: .3s all;
+}
+
+.menu-item a:hover {
+	color: #5fa1fc;
+}

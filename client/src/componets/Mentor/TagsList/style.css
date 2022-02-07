@@ -1,0 +1,24 @@
+.show-more {
+	margin-left: 27px;
+}
+
+.show-more .vector {
+	width: 20px;
+	height: 5px;
+	fill: #9D7C7C;
+}
+
+.show-more,
+.show-more .vector {
+	transition: .3s all;
+}
+
+.show-more.active {
+	background-color: #9d7c7c;
+	color: #fff;
+}
+
+.show-more.active .vector {
+	fill: #fff;
+	transform: rotate(-180deg);
+}

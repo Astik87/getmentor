@@ -1,0 +1,11 @@
+.mentor {
+	padding-top: 100px;
+	background-color: #f1f3f6;
+}
+
+.mentor .title {
+	text-align: center;
+	color: #9d7c7c;
+	font-size: 48px;
+	margin-bottom: 60px;
+}

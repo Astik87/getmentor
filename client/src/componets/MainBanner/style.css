@@ -1,0 +1,46 @@
+.main-banner {
+	background: linear-gradient(0deg, rgba(95, 161, 252, 0.05), rgba(95, 161, 252, 0.05)), #FFFFFF;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04);
+}
+
+.main-banner .banner-wrap {
+	position: relative;
+	min-height: 600px;
+	max-height: 930px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+.main-banner .content {
+	margin-left: 180px;
+
+}
+
+.main-banner .text {
+	color: #9d7c7c;
+}
+
+.main-banner .text h1 {
+	font-size: 48px;
+	margin-bottom: 32px;font-weight: bold;
+	text-transform: uppercase;
+}
+
+.main-banner .text span {
+	font-size: 36px;
+}
+
+.banner-bg {
+	position: absolute;
+	top: 0;
+	right: 130px;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-btn {
+	margin-top: 190px;
+}
