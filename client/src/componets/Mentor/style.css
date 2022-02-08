@@ -9,3 +9,11 @@
 	font-size: 48px;
 	margin-bottom: 60px;
 }
+
+.mentor .line {
+	width: 100%;
+	max-width: 1360px;
+	height: 2px;
+	background-color: #513d3d;
+	margin: 20px auto;
+}

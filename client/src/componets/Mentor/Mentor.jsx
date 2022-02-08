@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import MentorSearch from "./MentorSearch";
+import MentorSort from "./MentorSort";
 
 import "./style.css"
 
@@ -12,6 +13,8 @@ class Mentor extends Component {
 					<h2 className="title">Выберите интересующую тебя тему </h2>
 
 					<MentorSearch />
+					<div className="line"></div>
+					<MentorSort />
 				</div>
 			</div>
 		);
