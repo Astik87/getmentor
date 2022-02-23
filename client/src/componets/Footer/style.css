@@ -1,0 +1,23 @@
+.footer {
+	display: flex;
+	justify-content: space-between;
+	padding: 38px 0;
+}
+
+.footer .title {
+	color: #513d3d;
+	font-weight: 600;
+	margin-bottom: 16px;
+}
+
+.footer .menu {
+	flex-direction: column;
+	color: #513d3d;
+}
+
+.footer .menu a {
+	color: #513d3d;
+	padding: 6px 0;
+	display: block;
+	font-size: 16px;
+}
