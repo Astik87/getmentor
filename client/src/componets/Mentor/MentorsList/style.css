@@ -18,3 +18,26 @@
 .mentors-list-wrap .show-more.dis {
 	display: none;
 }
+
+@media screen and (max-width: 1772px) {
+	.mentors-list {
+		margin: 30px auto;
+		max-width: 1305px;
+	}
+}
+
+@media screen and (max-width: 1368px) {
+	.mentors-list {
+		max-width: 870px;
+	}
+}
+
+@media screen and (max-width: 924px) {
+	.mentors-list {
+		max-width: 435px;
+	}
+	
+	.mentor-item {
+		margin: 10px 0;
+	}
+}

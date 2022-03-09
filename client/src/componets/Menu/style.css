@@ -28,3 +28,81 @@
 .profile:hover svg {
 	fill: #5FA1FC;
 }
+
+.menu-icon {
+	display: none;
+}
+
+@media screen and (max-width: 500px) {
+	.menu-icon {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		width: 25px;
+    height: 17px;
+		margin-left: 20px;
+		position: relative;
+	}
+
+	.menu-icon span,
+	.menu-icon::before,
+	.menu-icon::after {
+		content: '';
+		height: 3px;
+		width: 100%;
+		background-color: #000;
+	}
+
+	.menu-icon.active span {
+		display: none;
+	} 
+
+	.menu-icon.active::before,
+	.menu-icon.active::after {
+		position: absolute;
+		left: 0;
+		top: 50%;
+	}
+	
+	.menu-icon.active::before {
+		transform: rotate(-45deg);
+	}
+	
+	.menu-icon.active::after {
+		transform: rotate(45deg);
+	}
+
+	.menu {
+		align-items: center;
+	}
+
+	.menu .menu-list {
+		height: 0;
+		overflow: hidden;
+		transition: .3s height
+	}
+
+	.menu a {
+		padding: 3px;
+		display: block;
+		font-size: 24px;
+	}
+
+	.menu li {
+		width: 100%;
+		text-align: center;
+	}
+	
+	.menu .menu-list {
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		background-color: #fff;
+		width: 100%;
+	}
+	.menu.active .menu-list {
+		height: calc(100vh - 70px);
+	}
+}

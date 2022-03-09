@@ -44,3 +44,36 @@
 .banner-btn {
 	margin-top: 190px;
 }
+
+@media screen and (max-width: 1564px) {
+	.main-banner .text h1 {
+		font-size: 32px;
+    margin-bottom: 10px;
+	}
+	
+	.main-banner .text span {
+		font-size: 24px;
+	}
+	
+	.banner-btn {
+		margin-top: 30px;
+	}
+}
+
+@media screen and (max-width: 1345px) {
+	.banner-bg {
+		display: none;
+	}
+
+	.main-banner .banner-wrap {
+		text-align: center;
+		justify-content: center;
+		padding: 80px 0;
+		height: unset;
+		min-height: unset;
+	}
+
+	.main-banner .content {
+		margin: 0;
+	}
+}

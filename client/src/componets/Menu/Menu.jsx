@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 import MenuList from "./MenuList"
 
@@ -6,36 +6,55 @@ import "./style.css"
 import profile from "./img/profile.svg"
 import vector from "./img/vector.svg"
 
-const Menu = () => {
+class Menu extends Component {
 
-	let menuList = [
-		{
-			link: '/',
-			text: 'Найти ментора'
-		},
-		{
-			link: '/',
-			text: 'Стать ментором'
-		},
-		{
-			link: '/',
-			text: 'Помощь'
-		}
-	];
+	constructor(props) {
+		super(props);
 
-	return (
-		<div className="menu">
-			<MenuList menuList={menuList} />
-			<div className="profile">
-				<svg className="profileIcon">
-					<use xlinkHref={`${profile}#profile`}> </use>
-				</svg>
-				<svg className="vector">
-					<use xlinkHref={`${vector}#vector`}> </use>
-				</svg>
+		this.state = { menuIcon: '' }
+	}
+
+	menuIconClick = () => {
+		let { menuIcon } = this.state;
+		if (!menuIcon)
+			this.setState({ menuIcon: 'active' });
+		else
+			this.setState({ menuIcon: '' });
+	}
+
+	render() {
+		let menuList = [
+			{
+				link: '/',
+				text: 'Найти ментора'
+			},
+			{
+				link: '/',
+				text: 'Стать ментором'
+			},
+			{
+				link: '/',
+				text: 'Помощь'
+			}
+		];
+
+		return (
+			<div className={`menu ${this.state.menuIcon}`} >
+				<MenuList menuList={menuList} />
+				<div className="profile">
+					<svg className="profileIcon">
+						<use xlinkHref={`${profile}#profile`}> </use>
+					</svg>
+					<svg className="vector">
+						<use xlinkHref={`${vector}#vector`}> </use>
+					</svg>
+				</div>
+				<div className={`menu-icon ${this.state.menuIcon}`} onClick={this.menuIconClick}>
+					<span></span>
+				</div>
 			</div>
-		</div>
-	);
+		);
+	}
 }
 
 export default Menu;
