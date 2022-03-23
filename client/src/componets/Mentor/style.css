@@ -17,3 +17,13 @@
 	background-color: #513d3d;
 	margin: 20px auto;
 }
+
+@media screen and (max-width: 600px) {
+	.mentor .title {
+		font-size: 28px;
+    margin-bottom: 25px;
+	}
+	.mentor {
+		padding: 30px 0;
+	}
+}

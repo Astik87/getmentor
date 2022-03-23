@@ -3,7 +3,7 @@
 	color: #9d7c7c;
 	text-decoration: none;
 	margin: 0 6px;
-	transition: .3s all;
+	transition: .3s color;
 }
 
 .menu-item a:hover {

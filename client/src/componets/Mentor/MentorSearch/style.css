@@ -32,3 +32,14 @@
 	padding: 12px 70px;
 	margin-left: 20px;
 }
+
+@media screen and (max-width: 567px) {
+	.search-input {
+		flex-direction: column;
+	}
+
+	.search-input input {
+		margin-bottom: 25px;
+		max-width: 85%;
+	}
+}
