@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import MenuList from "./MenuList"
 
@@ -26,14 +27,16 @@ const Menu = () => {
 	return (
 		<div className="menu">
 			<MenuList menuList={menuList} />
-			<div className="profile">
-				<svg className="profileIcon">
-					<use xlinkHref={`${profile}#profile`}> </use>
-				</svg>
-				<svg className="vector">
-					<use xlinkHref={`${vector}#vector`}> </use>
-				</svg>
-			</div>
+			<Link to="/register">
+				<div className="profile">
+					<svg className="profileIcon">
+						<use xlinkHref={`${profile}#profile`}> </use>
+					</svg>
+					<svg className="vector">
+						<use xlinkHref={`${vector}#vector`}> </use>
+					</svg>
+				</div>
+			</Link>
 		</div>
 	);
 }
