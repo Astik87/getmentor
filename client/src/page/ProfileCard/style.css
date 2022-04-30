@@ -1,0 +1,133 @@
+.profile-card {
+    padding: 80px 0;
+    background-color: #f3f7ff;
+}
+
+.profile-card .container {
+    max-width: 1240px;
+}
+
+.profile-card .title {
+    font-weight: 500;
+    font-size: 48px;
+    color: #513d3d;
+    margin-bottom: 70px;
+}
+
+.profile-card-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-card-form .line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 44px;
+}
+
+.profile-card-form .field {
+    width: 100%;
+    max-width: 280px;
+}
+
+.profile-card-form .field span,
+.profile-card-form .tags .tags-title,
+.profile-card-form .description .description-title{
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #513d3d;
+    display: block;
+}
+
+.profile-card-form .field input,
+.profile-card-form .tags-values-list,
+.profile-card-form textarea,
+.profile-card-form .new-tag{
+    padding: 16px;
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+    border-radius: 15px;
+    background-color: rgba(157, 124, 124, 0.25);
+    border: 2px solid #9D7C7C;
+}
+
+.profile-card-form .new-tag {
+    font-size: 14px;
+    padding: 10px;
+    max-width: 89px;
+    margin-right: 10px;
+}
+
+.profile-card-form .tags-values-list {
+    padding: 5px;
+    text-align: left;
+}
+
+.profile-card-form .tag-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 25px;
+    margin-left: 10px;
+}
+
+.profile-card-form .tags .plus,
+.profile-card-form .tags .delete {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, rgba(8, 188, 37, 0.25) 0%, rgba(69, 216, 0, 0.25) 100%);
+    cursor: pointer;
+}
+
+.profile-card-form .tags .delete {
+    background: radial-gradient(72.92% 72.92% at 14.58% 14.58%, rgba(255, 0, 0, 0.04) 0%, rgba(255, 0, 122, 0.06) 100%);
+    margin-left: 10px;
+}
+
+.profile-card-form .description {
+    margin-top: 45px;
+}
+
+.profile-card-form .description textarea {
+    width: 100%;
+    max-width: 100%;
+    text-align: left;
+    height: 170px;
+    resize: none;
+}
+
+.profile-card-form .tags.active .tags-list {
+    display: block;
+}
+
+.profile-card-form .tags .add-tag {
+    position: relative;
+}
+
+.profile-card-form .tags .tags-list {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    border-radius: 15px;
+    background-color: #fff;
+    width: 100%;
+}
+
+.profile-card-form .tags .tags-list li {
+    padding: 10px;
+    color: #000000;
+}
+
+.profile-card-form .btn {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: auto;
+}

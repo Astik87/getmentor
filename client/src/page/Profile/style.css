@@ -1,0 +1,152 @@
+.profile-page {
+    padding: 140px 0;
+    margin: 0;
+    background-color: #f3f7ff;
+}
+
+.profile-page .ava {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-page .ava input {
+    display: none;
+}
+
+.profile-page .ava .delete {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.profile-page .ava img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-page .ava svg {
+    width: 50px;
+    height: 50px;
+}
+
+.profile-page .account-type {
+    display: flex;
+}
+
+.profile-page .account-type .btn {
+    display: block;
+    width: 100%;
+    height: 54px;
+    max-width: 54px;
+    padding: 0;
+    margin-left: 24px;
+    text-align: center;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.profile-page .container {
+    width: 100%;
+    max-width: 1420px;
+}
+
+.profile-page .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 70px;
+}
+
+.profile-page .title h1 {
+    font-size: 64px;
+    font-weight: 700;
+    color: #513d3d;
+}
+
+.profile-page .field span,
+.profile-page .field a{
+    font-size: 24px;
+    color: #513d3d;
+}
+
+.profile-page .field input,
+.profile-page .field .gender,
+.profile-page .account-type{
+    margin-top: 16px;
+}
+
+.profile-page .account-type {
+    background-color: rgba(157, 124, 124, 0.25);
+    border-radius: 15px;
+}
+
+.profile-page .field .gender,
+.profile-page .account-type{
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.profile-page .field .gender span,
+.profile-page .account-type span {
+    height: 100%;
+    width: 50%;
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.profile-page .field .gender span.active,
+.profile-page .account-type span.active{
+    border-radius: 13px;
+    color: #ffffff;
+    background-color: #513D3D;
+}
+
+.profile-page .field-form {
+    display: block;
+    width: 280px;
+    padding: 16px 0;
+    text-align: center;
+    background: rgba(157, 124, 124, 0.25);
+    border: 2px solid #9D7C7C;
+    border-radius: 15px;
+}
+
+.profile-page .content {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-page .line {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 700px;
+    margin-bottom: 30px;
+}
+
+.profile-page .ava {
+    width: 512px;
+    height: 512px;
+    background-color: rgba(157, 124, 124, 0.25);
+    margin-right: 100px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.profile-page .change-card {
+    margin-top: 16px;
+    cursor: pointer;
+}
+
+.profile-page .line.save {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.profile-page .btn {
+    cursor: pointer;
+}
