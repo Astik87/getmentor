@@ -8,6 +8,11 @@ const User = sequelize.define('user', {
 	password: {type: DataTypes.STRING},
 	description: {type: DataTypes.TEXT},
 	ava: {type: DataTypes.STRING},
+	gender: {type: DataTypes.STRING},
+	post: {type: DataTypes.STRING},
+	company: {type: DataTypes.STRING},
+	price: {type: DataTypes.INTEGER},
+	experience: {type: DataTypes.FLOAT},
 	ratingVal: {type: DataTypes.FLOAT},
 })
 

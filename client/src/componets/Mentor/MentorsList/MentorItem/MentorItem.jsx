@@ -9,7 +9,7 @@ let echoTags = (tags) => {
 	let res = [];
 
 	tags.forEach((e, i) => {
-		res.push(<li key={i}>{e}</li>);
+		res.push(<li key={i}>{e.name}</li>);
 	});
 
 	return res;
@@ -25,7 +25,7 @@ let MenuItem = (props) => {
 				</svg>
 			</div>
 			<div className="ava">
-				<img src={ava} alt="" />
+				<img src={process.env.REACT_APP_API_URL + "/static/"+ava} alt="" />
 				<div className="rating">
 					<span>{rating}</span>
 					<svg width="20" height="20" className="rating-icon">

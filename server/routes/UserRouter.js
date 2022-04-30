@@ -9,4 +9,12 @@ router.post('/login', UserController.login)
 
 router.get('/check', authMiddleware, UserController.check)
 
+router.post('/get-by-id', authMiddleware, UserController.getUserById)
+
+router.put('/update', UserController.update)
+
+router.put('/update-cart', UserController.updateCart)
+
+router.post('/get-by-filter', UserController.getUserByFilter)
+
 module.exports = router

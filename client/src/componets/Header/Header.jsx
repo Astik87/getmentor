@@ -6,7 +6,7 @@ import Menu from "../Menu";
 import "./style.css"
 import logo from "./img/logo.png"
 
-const Header = () => {
+const Header = props => {
 	return (
 		<header>
 			<div className="container">

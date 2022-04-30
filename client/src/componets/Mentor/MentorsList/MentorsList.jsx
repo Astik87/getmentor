@@ -4,6 +4,7 @@ import MentorItem from "./MentorItem";
 import Button from "../../Button";
 
 import "./style.css";
+import UserApi from "../../../Api/UserApi";
 
 class MentorsList extends Component {
 
@@ -16,315 +17,7 @@ class MentorsList extends Component {
 			limit: 12,
 			page: 1,
 			tagIds: [],
-			items: [
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3, 13, 12, 5, 11, 9, 7, 6, 8, 4],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-				{
-					name: 'Георгий Де-Броль',
-					post: 'Должность @компания',
-					price: 1000,
-					experience: 10,
-					ava: 'https://www.ejin.ru/wp-content/uploads/2018/10/kartinki_volka_na_avu_04.jpg',
-					tagIds: [1, 2, 3],
-					rating: 5
-				},
-
-			]
+			items: null
 		};
 
 	}
@@ -351,9 +44,7 @@ class MentorsList extends Component {
 
 		for (let index = 0; index < limit; index++) {
 			let item = this.state.items[index];
-			let tags = [];
-			item.tagIds.forEach((id) => { tags.push(this.getTagName(id)) });
-			res.push(<MentorItem key={index} name={item.name} price={item.price} experience={item.experience} post={item.post} tags={tags} rating={item.rating} ava={item.ava} />);
+			res.push(<MentorItem key={index} name={item.name} price={item.price} experience={item.experience} post={item.post} tags={item.tags} rating={item.ratingVal} ava={item.ava} />);
 		}
 
 		return res;
@@ -361,6 +52,15 @@ class MentorsList extends Component {
 	}
 
 	render() {
+
+		if(this.state.items == null) {
+			UserApi.getByFilter({roleId: 2}, true).then(res => {
+				this.setState({items: res.data});
+			})
+
+			return (<div>Загрузка...</div>);
+		}
+
 		return (
 			<div className="container">
 				<div className="mentors-list-wrap">
@@ -368,7 +68,7 @@ class MentorsList extends Component {
 						{this.echoMentorsList()}
 					</div>
 
-					<Button text="Показать ещё" click={this.handleShowMore} className={`show-more ${this.state.end ? 'dis' : ''}`} />
+					{this.state.items.length > this.state.limit && <Button text="Показать ещё" click={this.handleShowMore} className={`show-more ${this.state.end ? 'dis' : ''}`} />}
 				</div>
 			</div>
 		);

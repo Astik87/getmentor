@@ -74,6 +74,14 @@
 	flex-direction: column;
 }
 
+.reg-wrap .form .error input {
+	border: 1px solid red;
+}
+
+.reg-wrap .form .checkbox.error > span {
+	color: red;
+}
+
 .reg-wrap .form .radio,
 .reg-wrap .form .field,
 .reg-wrap .form .checkbox,

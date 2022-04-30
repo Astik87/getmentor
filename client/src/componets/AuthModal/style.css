@@ -1,0 +1,75 @@
+.auth-modal {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 95vw;
+    max-width: 360px;
+    border-right: 10px;
+    background-color: #fff;
+    padding: 35px;
+    font-weight: 500;
+    z-index: -1;
+    color: #513d3d;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.auth-modal.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+.auth-modal .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.auth-modal .auth-field {
+    font-size: 12px;
+    margin-bottom: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-modal .auth-field span {
+    margin-bottom: 5px;
+}
+
+.auth-modal .auth-field input {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid #9D7C7C;
+    background-color: rgba(157, 124, 124, 0.25);
+    border-radius: 8px;
+}
+
+.auth-modal .auth-field.error input {
+    border-color: red;
+}
+
+.auth-modal .change-password {
+    text-align: right;
+    text-decoration: underline;
+    margin-bottom: 30px;
+    color: #513d3d;
+}
+
+.auth-modal .auth-modal__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.auth-modal .register {
+    color: #349dff;
+    font-size: 12px;
+}
+
+.auth-modal .auth-btn {
+    font-size: 18px;
+    padding: 8px 30px;
+    margin-left: 70px;
+}
