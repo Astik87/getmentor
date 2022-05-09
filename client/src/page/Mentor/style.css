@@ -1,0 +1,61 @@
+.mentor {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+}
+
+.mentor-detail {
+    max-width: 800px;
+    color: #513d3d;
+}
+
+.user-rating {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.mentor-detail__name {
+    margin-top: 50px;
+    font-size: 48px;
+}
+
+.mentor-detail__post {
+    margin: 10px 0 30px 0;
+    font-size: 18px;
+}
+
+.mentor-detail__price,
+.mentor-detail__experience {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.mentor-detail__tags {
+    margin-bottom: 30px;
+}
+
+.mentor-signup {
+    margin-top: 44px;
+    margin-bottom: 60px;
+    cursor: pointer;
+}
+
+.mentor-detail__desc-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.mentor-detail__desc-text {
+    font-size: 18px;
+}
+
+.mentor-preview {
+    width: 656px;
+    height: 720px;
+}
+
+.mentor-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

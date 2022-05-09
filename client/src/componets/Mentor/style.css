@@ -18,6 +18,10 @@
 	margin: 20px auto;
 }
 
+.mentor .container {
+	width: 100%;
+}
+
 @media screen and (max-width: 600px) {
 	.mentor .title {
 		font-size: 28px;

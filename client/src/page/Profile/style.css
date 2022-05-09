@@ -75,6 +75,7 @@
 .profile-page .field .gender,
 .profile-page .account-type{
     margin-top: 16px;
+    font-size: 20px;
 }
 
 .profile-page .account-type {
@@ -142,11 +143,32 @@
     cursor: pointer;
 }
 
+.profile-page .card .btn  {
+    color: #fff;
+}
+
 .profile-page .line.save {
     display: flex;
     justify-content: flex-end;
 }
 
+.profile-page .profile-data {
+    display: flex;
+    flex-direction: column;
+}
+
 .profile-page .btn {
     cursor: pointer;
+}
+
+.profile-page .line.save.logout {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+
+.profile-page .logout {
+    color: red;
+    background-color: unset;
+    padding: 0;
+    padding-right: 20px;
 }

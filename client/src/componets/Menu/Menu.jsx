@@ -67,15 +67,15 @@ const Menu = observer(class extends Component {
 	render() {
 		let menuList = [
 			{
-				link: '/',
+				link: '#mentors',
 				text: 'Найти ментора'
 			},
 			{
-				link: '/',
+				link: '/register',
 				text: 'Стать ментором'
 			},
 			{
-				link: '/',
+				link: '#help',
 				text: 'Помощь'
 			}
 		];

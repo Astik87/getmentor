@@ -1,0 +1,114 @@
+.reg-wrap {
+	width: 100%;
+	height: 100vh;
+	min-height: 720px;
+	position: relative;
+}
+
+.reg-wrap .heading {
+	font-size: 32px;
+	font-weight: 500;
+	color: #513d3d;
+	padding-bottom: 15px;
+}
+
+.reg-wrap .content {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.reg-wrap__bg {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+
+.reg-wrap__bg img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+.reg-wrap .form {
+	width: 100%;
+	height: 100%;
+	max-width: 400px;
+	max-height: 560px;
+	background-color: #fff;
+	border-radius: 10px;
+	padding: 60px 70px;
+	display: flex;
+	flex-direction: column;
+}
+
+.reg-wrap .desc,
+.reg-wrap .form span {
+	font-size: 14px;
+	color: rgba(13, 13, 13, 0.5);
+}
+
+.reg-wrap .desc {
+	margin-bottom: 40px;
+}
+
+.reg-wrap .desc a {
+	color: #349dff;
+}
+
+.reg-wrap .form .tow {
+	display: flex;
+	justify-content: space-between;
+}
+
+.reg-wrap .form .tow label {
+	max-width: 176px;
+}
+
+.reg-wrap .form .field {
+	display: flex;
+	flex-direction: column;
+}
+
+.reg-wrap .form .radio,
+.reg-wrap .form .field,
+.reg-wrap .form .checkbox,
+.reg-wrap .form hr {
+	margin-bottom: 24px;
+}
+.reg-wrap .form .radio {
+	display: flex;
+	justify-content: space-between;
+}
+
+.reg-wrap .form .checkbox {
+	width: 100%;
+	max-width: 300px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.reg-wrap .form .radio input {
+	margin-right: 10px;
+}
+
+.reg-wrap .field input {
+	padding: 0 10px;
+	width: 100%;
+	height: 34px;
+	margin-top: 3px;
+	background: rgba(157, 124, 124, 0.25);
+	border: 1px solid #9D7C7C;
+	border-radius: 10px;
+}
+
+.reg-wrap .form .btn {
+	font-size: 14px;
+	font-weight: 500;
+	padding: 15px;
+	margin-left: auto;
+}

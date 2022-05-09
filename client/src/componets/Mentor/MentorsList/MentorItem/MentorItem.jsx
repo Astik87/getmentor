@@ -4,6 +4,7 @@ import "./style.css";
 
 import ratingIcon from "../../MentorSort/img/ratingIcon.svg"
 import vector from "./img/vector.svg";
+import {Link} from "react-router-dom";
 
 let echoTags = (tags) => {
 	let res = [];
@@ -16,9 +17,9 @@ let echoTags = (tags) => {
 }
 
 let MenuItem = (props) => {
-	let { name, price, ava, experience, tags, post, rating } = props;
+	let {id, name, price, ava, experience, tags, post, rating } = props;
 	return (
-		<a href="#" className="mentor-item">
+		<Link to={`/mentor/${id}`} className="mentor-item">
 			<div className="vector">
 				<svg>
 					<use xlinkHref={`${vector}#vector`}> </use>
@@ -42,7 +43,7 @@ let MenuItem = (props) => {
 					{echoTags(tags)}
 				</ul>
 			</div>
-		</a>
+		</Link>
 	);
 }
 

@@ -1,0 +1,62 @@
+.info-wrap {
+	padding-top: 48px;
+	background-color: #F1F3F6;
+}
+
+.pageHeading {
+	font-size: 20px;
+	font-weight: 500;
+	color: #513d3d;
+	margin: 24px;
+	text-align: center;
+}
+
+a {
+	color: #513d3d;
+}
+
+.info-wrap .heading,.info-wrap p, .info-wrap .contact-menu {
+	color: #513d3d;
+	max-width: 90%;
+	line-height: 150%;
+	text-align: justify;
+	padding-left: 64px;
+	text-indent: 40px;
+}
+
+.heading {
+	font-size: 32px;
+	font-weight: 500;
+	padding-top: 32px;
+	padding-bottom: 21px;
+}
+
+.contacts {
+	text-align: right;
+}
+
+.contact-menu {
+	font-size: 32px;
+	font-weight: 500;
+	padding-top: 32px;
+	padding-bottom: 21px;
+	text-align: right;
+}
+
+
+p {
+	color: #513d3d;
+	font-size: 18px;
+	padding-bottom: 8px;
+}
+
+.ques {
+	font-weight: 500;
+	font-size: 24;
+}
+
+.response {
+	color: #0051C0;
+	font-style: italic;
+	padding-bottom: 24px;
+}

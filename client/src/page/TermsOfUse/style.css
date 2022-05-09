@@ -1,0 +1,42 @@
+.policy-wrap {
+	background-color: #F1F3F6;
+	padding-top: 48px;
+}
+
+.pageHeading {
+	font-size: 20px;
+	font-weight: 500;
+	color: #513d3d;
+	margin: 0 0 24px;
+	text-align: center;
+}
+
+a {
+	color: #513d3d;
+}
+
+.policy-wrap .heading, .policy-wrap p {
+	color: #513d3d;
+	max-width: 90%;
+	line-height: 150%;
+	text-align: justify;
+	padding-left: 64px;
+	text-indent: 40px;
+}
+
+.heading {
+	font-size: 32px;
+	font-weight: 500;
+	padding-top: 32px;
+	padding-bottom: 21px;
+}
+
+p {
+	color: #513d3d;
+	font-size: 18px;
+	padding-bottom: 8px;
+}
+
+.blue {
+	color: #2B84FF;
+}

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 
 import MainBanner from "../../componets/MainBanner";
 import Mentor from "../../componets/Mentor";
@@ -8,8 +8,27 @@ import "./style.css"
 
 import helpImg from './img/helpImg.png';
 import newMentorImg from './img/newMentorImg.png';
+import {Link} from "react-router-dom";
+import EmailApi from "../../Api/EmailApi";
+import Context from "../../Context";
+
+
+const send = async (name, email) => {
+	const data = await EmailApi.sendQuestions(name, email);
+
+	if(!data.error)
+		alert('Спасибо! Мы свяжемся с вами в ближайшее время!')
+	else
+		alert('Ошибка! Пожалуйста, повторите попытку позже.')
+}
 
 const Main = () => {
+
+	const [userName, setUserName] = useState('');
+	const [userEmail, setUserEmail] = useState('');
+
+	const {user} = useContext(Context);
+
 	return (
 		<div className="main">
 			<MainBanner />
@@ -143,17 +162,17 @@ const Main = () => {
 						</div>
 					</div>
 				</div>
-				<Button text="Оставить заявку" />
+				<Link to={user.isAuth ? '/profile' : `/register`} className="btn">Оставить заявку</Link>
 			</div>
 
-			<div className="questions">
+			<div className="questions" id="help">
 				<h2 className="heading">Остались вопросы?</h2>
 				<div className="form">
 					<div className="title">Связаться с нами по почте</div>
-					<input type="text" placeholder="Ваше имя" />
-					<input className="email" type="text" placeholder="Электронная почта" />
-					<span>Я соглашаюсь с условиями <a href="#">политики конфиденциальности</a></span>
-					<Button text="Отправить" />
+					<input type="text" placeholder="Ваше имя" value={userName} onInput={(e) => setUserName(e.target.value)} />
+					<input className="email" type="text" placeholder="Электронная почта" value={userEmail} onInput={(e) => setUserEmail(e.target.value)} />
+					<span>Я соглашаюсь с условиями <Link to="/privacy-policy">политики конфиденциальности</Link></span>
+					<Button text="Отправить" click={() => send()} />
 				</div>
 			</div>
 		</div>

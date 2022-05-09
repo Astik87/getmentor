@@ -25,6 +25,12 @@ export default class UserState {
         return this._user;
     }
 
+    logout() {
+        localStorage.clear();
+
+        this.setIsAuth(false);
+    }
+
     async checkIsAuth() {
         this.setIsAuth(await UserApi.check());
         return this.isAuth;

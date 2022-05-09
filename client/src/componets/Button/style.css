@@ -5,7 +5,13 @@
 	color: #fff;
 	padding: 18px 57px;
 	border-radius: 14px;
-	background-color: #5FA1FC;
+	background: #5FA1FC;
+	transition: .3s all;
+	cursor: pointer;
+}
+
+.btn:hover {
+	transform: scale(1.05);
 }
 
 @media screen and (max-width: 567px) {

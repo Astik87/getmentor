@@ -21,6 +21,8 @@ class MentorSort extends Component {
 				[e]: this.state[e] == 'asc' ? "desc" : 'asc'
 			});
 		}
+
+		this.props.setSort(this.state);
 	}
 
 	render() {

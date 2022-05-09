@@ -11,8 +11,6 @@ class MentorsList extends Component {
 	constructor(props) {
 		super(props);
 
-		this.getTagName = props.getTagName;
-
 		this.state = {
 			limit: 12,
 			page: 1,
@@ -44,14 +42,56 @@ class MentorsList extends Component {
 
 		for (let index = 0; index < limit; index++) {
 			let item = this.state.items[index];
-			res.push(<MentorItem key={index} name={item.name} price={item.price} experience={item.experience} post={item.post} tags={item.tags} rating={item.ratingVal} ava={item.ava} />);
+
+			let matchesTheFilter = [];
+
+			if (this.props.filter.tags && this.props.filter.tags.length !== 0) {
+
+				matchesTheFilter = item.tags.filter(tag => {
+					return this.props.filter.tags.indexOf(tag.id) !== -1;
+				});
+
+				if (matchesTheFilter.length === 0) {
+					continue;
+				}
+
+			}
+
+			if (this.props.filter.name && this.props.filter.name !== '' && !item.name.includes(this.props.filter.name)) {
+
+				continue;
+
+			}
+
+			res.push(<MentorItem key={index} id={item.id} name={item.name} price={item.price} experience={item.experience} post={item.post} tags={item.tags} rating={item.ratingVal} ava={item.ava} />);
 		}
 
 		return res;
 
 	}
 
+	sort() {
+		const sortMentors = this.state.items.sort((a, b) => {
+
+			const priceMod = this.props.sort.price === 'asc' ? 1 : -1;
+			const ratingMod = this.props.sort.rating === 'asc' ? -1 : 1;
+
+			if(a.price !== b.price) {
+				return (a.price - b.price) * priceMod;
+			}
+
+			if(a.price === b.price) {
+				return (a.ratingVal - b.ratingVal) * ratingMod;
+			}
+		});
+	}
+
 	render() {
+
+		// console.log(this.props)
+		if(this.props.sort) {
+			this.sort();
+		}
 
 		if(this.state.items == null) {
 			UserApi.getByFilter({roleId: 2}, true).then(res => {

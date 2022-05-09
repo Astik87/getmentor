@@ -6,9 +6,9 @@ const uuid = require('uuid')
 const path = require('path')
 const {Op} = require("sequelize");
 
-const generateJWT = (id, email, roleId) => {
+const generateJWT = (id, name, email, roleId) => {
 	return jwt.sign(
-		{id, email, roleId},
+		{id, name, email, roleId},
 		process.env.SECRET_KEY,
 		{expiresIn: '24h'}
 	)
@@ -81,13 +81,13 @@ class UserController {
 		if (!comparePassword)
 			return next(ApiError.badRequest('Неверный email или пароль!'))
 
-		const token = generateJWT(user.id, email, user.roleId)
+		const token = generateJWT(user.id, user.name, email, user.roleId)
 		
 		return res.json({token})
 	}
 
 	async check(req, res) {
-		const token = generateJWT(req.user.id, req.user.email, req.user.roleId)
+		const token = generateJWT(req.user.id, req.user.name, req.user.email, req.user.roleId)
 		return res.json({token})
 	}
 
@@ -204,6 +204,18 @@ class UserController {
 		}
 
 		return res.json(users)
+	}
+
+	async setRating(req, res) {
+		const {userId, rating} = req.body
+		const user = await User.findOne({where: {id: userId}})
+
+		if(!user)
+			return res.json({error: 'Пользователь не найден'})
+
+		const userUpdated = await User.update({ratingVal: rating}, {where: {id: user.id}})
+
+		return res.json(userUpdated)
 	}
 }
 

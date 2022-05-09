@@ -4,11 +4,14 @@ import "./style.css"
 
 const TagsItem = (props) => {
 
-	let { text } = props;
+	let { name, id } = props.tag;
+	let { tagClickHandler, isActive } = props;
+
+	isActive = isActive ? 'active' : '';
 
 	return (
-		<li className="tags-item">
-			{text}
+		<li className={`tags-item ${isActive}`} data-id={id} onClick={() => typeof tagClickHandler === 'function' ? tagClickHandler(id) : ''}>
+			{name}
 		</li>
 	);
 }

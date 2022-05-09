@@ -20,7 +20,7 @@ const MainBanner = () => {
 							<h1>ПОМОЖЕМ ДОБИТЬСЯ ЦЕЛИ</h1>
 							<span>Найди своего ментора </span>
 						</div>
-						<Button link="/" text="Найти ментора" className="banner-btn" />
+						<Button link="#mentors" text="Найти ментора" className="banner-btn" />
 					</div>
 				</div>
 			</div>

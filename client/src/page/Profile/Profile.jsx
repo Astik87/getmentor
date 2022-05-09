@@ -6,6 +6,7 @@ import Button from "../../componets/Button";
 import {Link} from "react-router-dom";
 
 import deleteAva from "./img/delete.svg";
+import Context from "../../Context";
 
 class Profile extends Component {
     constructor(props) {
@@ -25,6 +26,10 @@ class Profile extends Component {
                     <span className="change-card field-form">
                         <Link to="/profile/card">Редактировать</Link>
                     </span>
+                </div>
+
+                <div className="field card">
+                    <Button click={this.save} text="Сохранить"/>
                 </div>
             </div>
         );
@@ -103,6 +108,8 @@ class Profile extends Component {
             });
         }
 
+        const {user} = this.context;
+
         return (
             <div className="profile-page">
                 <div className="container">
@@ -113,7 +120,7 @@ class Profile extends Component {
                                 Пользователь
                             </span>
                             <span className={this.state.isMentor ? 'active' : ''} onClick={() => this.changeRole(2)}>
-                                Менетор
+                                Ментор
                             </span>
                         </div>
                     </div>
@@ -167,8 +174,8 @@ class Profile extends Component {
 
                             {this.changeCardLink()}
 
-                            <div className="line save">
-                                <Button click={this.save} text="Сохранить"/>
+                            <div className="line save logout">
+                                <Button text="Выйти" className="logout" click={() => user.logout()}/>
                             </div>
                         </div>
                     </div>
@@ -177,5 +184,6 @@ class Profile extends Component {
         );
     }
 }
+Profile.contextType = Context
 
 export default Profile;

@@ -11,42 +11,57 @@ class Mentor extends Component {
 	constructor(props) {
 		super(props);
 
-		this.tags = {
-			1: 'Developments',
-			2: 'Management',
-			3: 'DevOps',
-			4: 'HR',
-			5: 'Marketing',
-			6: 'QA',
-			7: 'Data Science',
-			8: 'Design',
-			9: 'Аналитика',
-			10: '3D',
-			11: 'Python',
-			12: 'Marketing',
-			13: 'QA',
-			14: 'Data Science',
-			15: 'Design',
-			16: 'Аналитика',
-			17: '3D',
-			18: 'Python'
+		this.state = {
+			mentorsFilter: false,
+			sort: false
 		};
 	}
 
-	getTagName = (id) => {
-		return this.tags[id];
+	tagClickHandler = (id) => {
+		let {mentorsFilter} = this.state;
+
+		if (mentorsFilter && mentorsFilter.tags.length > 0) {
+			const tagIndex = mentorsFilter.tags.indexOf(id);
+			if (tagIndex === -1) {
+				mentorsFilter.tags.push(id);
+			} else {
+				mentorsFilter.tags.splice(tagIndex, 1);
+			}
+		} else {
+			mentorsFilter = {};
+			mentorsFilter.tags = [id]
+		}
+
+		this.setState({mentorsFilter})
+	}
+
+	searchInputHandler = (name) => {
+
+		let {mentorsFilter} = this.state;
+
+		if (!mentorsFilter)
+			mentorsFilter = {name}
+		else
+			mentorsFilter.name = name;
+
+		this.setState({mentorsFilter});
+
+	}
+
+	setSort = (sort) => {
+		this.setState({sort});
 	}
 
 	render() {
 		return (
-			<div className="mentor">
+			<div className="mentor" id="mentors">
 				<div className="container">
 					<h2 className="title">Выберите интересующую тебя тему </h2>
 
-					<MentorSearch />
+					<MentorSearch tagClickHandler={this.tagClickHandler} searchInputHandler={this.searchInputHandler} activeTags={this.state.mentorsFilter.tags} />
 					<div className="line"></div>
-					<MentorSort />
-					<MentorsList getTagName={this.getTagName} />
+					<MentorSort setSort={this.setSort} />
+					<MentorsList sort={this.state.sort} filter={this.state.mentorsFilter} />
 				</div>
 			</div>
 		);

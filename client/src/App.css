@@ -16,3 +16,7 @@ a {
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+p, h1, h2, span, ul, li, div {
+	font-family: 'Roboto', sans-serif;
+}

@@ -52,6 +52,22 @@ User.belongsToMany(User, {as: 'mentor_id', foreignKey: 'mentor_id', through: Rat
 User.hasOne(VerifyEmail)
 VerifyEmail.belongsTo(User)
 
+const createBaseRoles = async () => {
+	const user = await Roles.findOne({where: {id: 1}})
+
+	if(!user) {
+		Roles.create({id: 1, name: 'Пользователь'})
+	}
+
+	const mentor = await Roles.findOne({where: {id: 2}})
+
+	if(!mentor) {
+		Roles.create({id: 2, name: 'Ментор'})
+	}
+}
+
+createBaseRoles()
+
 module.exports = {
 	User,
 	Roles,

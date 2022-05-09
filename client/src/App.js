@@ -12,6 +12,10 @@ import {observer} from "mobx-react-lite";
 import Context from "./Context";
 import Profile from "./page/Profile";
 import ProfileCard from "./page/ProfileCard";
+import Mentor from "./page/Mentor";
+import Info from "./page/Info";
+import TermsOfUse from "./page/TermsOfUse";
+import PrivacyPolicy from "./page/PrivacyPolicy";
 
 const App = observer(() => {
 
@@ -20,7 +24,6 @@ const App = observer(() => {
 
   if (loading) {
     user.checkIsAuth().then(data => {
-      // user.setIsAuth();
       setLoading(false);
     }).finally(() => setLoading(false));
   }
@@ -38,6 +41,10 @@ const App = observer(() => {
             <Route path="/register" element={ !user.isAuth ? <Register /> : <Navigate to="/" />}/>
             <Route path="/profile" element={ user.isAuth ? <Profile /> : <Navigate to="/" />}/>
             <Route path="/profile/card" element={ user.isAuth ? <ProfileCard /> : <Navigate to="/" />}/>
+            <Route path="/privacy-policy" element={<PrivacyPolicy />}/>
+            <Route path="/terms-of-use" element={<TermsOfUse />}/>
+            <Route path="/info" element={<Info />}/>
+            <Route path="/mentor/:id" element={ <Mentor />}/>
             <Route path="*" element={<div className="container"><h1>Страница в разработке</h1></div>}/>
           </Routes>
         <Footer />
